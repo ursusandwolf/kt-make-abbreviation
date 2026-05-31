@@ -2,10 +2,12 @@ package mate.academy
 
 fun makeAbbr(source: String) : String {
     val sb = StringBuilder()
-    for(s in source.split(' ')) {
-        if (s.isNotEmpty()) {
-        sb.append(s[0])
+
+    for (word in source.split(' ')) {
+        if (word.isNotBlank()) {
+            sb.append(word.first())
         }
     }
+
     return sb.toString().uppercase()
 }
